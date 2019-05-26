@@ -20,7 +20,7 @@ function write_comments_vml(rId/*:number*/, comments) {
 		id:'_x0000_s' + (++_shapeid),
 		type:"#_x0000_t202",
 		style:"position:absolute; margin-left:" + (x[1].marginLeft || "80pt") + ";margin-top:" + (x[1].marginTop || "5pt") + ";width:" + (x[1].width || "104pt") + ";height:" + (x[1].height || "64pt") + ";z-index:10" + (x[1].hidden ? ";visibility:hidden" : "") ,
-		fillcolor:x[1].fillColor || "#ECFFF4",
+		fillcolor:x[1].fillColor || "#ECFAD4",
 		strokecolor:x[1].strokeColor || "#edeaa1"
 	}) + '>',
 		writextag('v:fill', writextag("o:fill", null, {type:"gradientUnscaled", 'v:ext':"view"}), {'color2':x[1].color2 || "#BEFF82", 'angle':"-180", 'type':"gradient"}),
