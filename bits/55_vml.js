@@ -19,11 +19,11 @@ function write_comments_vml(rId/*:number*/, comments) {
 	'<v:shape' + wxt_helper({
 		id:'_x0000_s' + (++_shapeid),
 		type:"#_x0000_t202",
-		style:"position:absolute; margin-left:80pt;margin-top:5pt;width:104pt;height:64pt;z-index:10" + (x[1].hidden ? ";visibility:hidden" : "") ,
-		fillcolor:"#ECFAD4",
-		strokecolor:"#edeaa1"
+		style:"position:absolute; margin-left:" + (x[1].marginLeft || "80pt") + ";margin-top:" + (x[1].marginTop || "5pt") + ";width:" + (x[1].width || "104pt") + ";height:" + (x[1].height || "64pt") + ";z-index:10" + (x[1].hidden ? ";visibility:hidden" : "") ,
+		fillcolor:x[1].fillColor || "#ECFFF4",
+		strokecolor:x[1].strokeColor || "#edeaa1"
 	}) + '>',
-		writextag('v:fill', writextag("o:fill", null, {type:"gradientUnscaled", 'v:ext':"view"}), {'color2':"#BEFF82", 'angle':"-180", 'type':"gradient"}),
+		writextag('v:fill', writextag("o:fill", null, {type:"gradientUnscaled", 'v:ext':"view"}), {'color2':x[1].color2 || "#BEFF82", 'angle':"-180", 'type':"gradient"}),
 		writextag("v:shadow", null, {on:"t", 'obscured':"t"}),
 		writextag("v:path", null, {'o:connecttype':"none"}),
 		'<v:textbox><div style="text-align:left"></div></v:textbox>',
